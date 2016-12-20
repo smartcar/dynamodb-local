@@ -5,5 +5,5 @@ FROM openjdk:8
 
 RUN wget http://dynamodb-local.s3-website-us-west-2.amazonaws.com/dynamodb_local_latest.tar.gz -q -O - | tar -xz
 
-EXPOSE 8000
-ENTRYPOINT ["java", "-jar", "DynamoDBLocal.jar"]
+EXPOSE 18000
+ENTRYPOINT ["java", "-jar", "DynamoDBLocal.jar", "-port", "18000"]
